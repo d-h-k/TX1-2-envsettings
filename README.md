@@ -1,7 +1,8 @@
 # TX1-2-envsettings
 TX1/2 envsettings
 
-
+ - [여기 깃허브 내용을 참고해서 설치함](https://github.com/d-h-k/jetson-inference)
+ - [정확히는 ](https://github.com/d-h-k/jetson-inference/blob/master/docs/building-repo-2.md)
 
 # 1
 
@@ -106,4 +107,9 @@ lion@lion-desktop:~/jetson-inference/build/aarch64/bin$
 # 5
 
  - [여기링크에서 보드를 복구합니다](https://docs.nvidia.com/sdk-manager/install-with-sdkm-jetson/index.html)
- - 위의 보드 셋팅과정 반복
+ - [젯펙 ](https://developer.nvidia.com/embedded/jetpack)
+ - 위의 보드 셋팅과정 반복 
+ 
+ 
+ 
+ 
