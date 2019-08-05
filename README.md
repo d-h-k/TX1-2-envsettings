@@ -102,3 +102,8 @@ imagenet-console:   failed to initialize imageNet
 lion@lion-desktop:~/jetson-inference/build/aarch64/bin$ 
 
 ```
+
+# 5
+
+ - [여기링크에서 보드를 복구합니다](https://docs.nvidia.com/sdk-manager/install-with-sdkm-jetson/index.html)
+ - 위의 보드 셋팅과정 반복
