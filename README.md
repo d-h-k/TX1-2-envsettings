@@ -51,3 +51,54 @@ Date:   Thu Aug 2 17:17:28 2018 +0000
 # 3
 
 sudo ./imagenet-camera
+
+
+# 4
+- fail...
+```
+lion@lion-desktop:~/jetson-inference/build/aarch64/bin$ sudo ./imagenet-camera
+[gstreamer] initialized gstreamer, version 1.14.4.0
+[gstreamer] gstCamera attempting to initialize with GST_SOURCE_NVARGUS, camera 0
+[gstreamer] gstCamera pipeline string:
+nvarguscamerasrc sensor-id=0 ! video/x-raw(memory:NVMM), width=(int)1280, height=(int)720, framerate=30/1, format=(string)NV12 ! nvvidconv flip-method=2 ! video/x-raw ! appsink name=mysink
+[gstreamer] gstCamera successfully initialized with GST_SOURCE_NVARGUS, camera 0
+
+imagenet-camera:  successfully initialized camera device
+    width:  1280
+   height:  720
+    depth:  12 (bpp)
+
+
+imageNet -- loading classification network model from:
+         -- prototxt     networks/googlenet.prototxt
+         -- model        networks/bvlc_googlenet.caffemodel
+         -- class_labels networks/ilsvrc12_synset_words.txt
+         -- input_blob   'data'
+         -- output_blob  'prob'
+         -- batch_size   1
+
+[TRT]   TensorRT version 5.0.6
+[TRT]   loading NVIDIA plugins...
+[TRT]   completed loading NVIDIA plugins.
+[TRT]   detected model format - caffe  (extension '.caffemodel')
+[TRT]   desired precision specified for GPU: FASTEST
+[TRT]   requested fasted precision for device GPU without providing valid calibrator, disabling INT8
+[TRT]   native precisions detected for GPU:  FP32, FP16
+[TRT]   selecting fastest native precision for GPU:  FP16
+[TRT]   attempting to open engine cache file .1.1.GPU.FP16.engine
+[TRT]   cache file not found, profiling network model on device GPU
+
+error:  model file 'networks/bvlc_googlenet.caffemodel' was not found.
+        if loading a built-in model, maybe it wasn't downloaded before.
+
+        Run the Model Downloader tool again and select it for download:
+
+           $ cd <jetson-inference>/tools
+           $ ./download-models.sh
+
+[TRT]   failed to load networks/bvlc_googlenet.caffemodel
+[TRT]   imageNet -- failed to initialize.
+imagenet-console:   failed to initialize imageNet
+lion@lion-desktop:~/jetson-inference/build/aarch64/bin$ 
+
+```
